@@ -1,15 +1,13 @@
 # SMSBao
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/sms_bao`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Ruby SDK for www.smsbao.com
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'sms_bao'
+gem 'gm-sms_bao', require: 'sms_bao'
 ```
 
 And then execute:
@@ -18,11 +16,30 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install sms_bao
+    $ gem install gm-sms_bao
 
 ## Usage
 
-TODO: Write usage instructions here
+### Config
+
+```ruby
+SMSBao.username = 'username'
+SMSBao.md5_password = 'md5-password'
+SMSBao.signature = '【xxx】'
+```
+
+### Send sms
+
+```ruby
+SMSBao.send_to!('10086', '流量唔够用啊')
+# SMSBao.send_to!(['10086', '10010'], '信号好差啊')
+```
+
+### Get quota
+
+```ruby
+SMSBao.quota # => 123
+```
 
 ## Development
 
