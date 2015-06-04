@@ -1,6 +1,5 @@
 require 'sms_bao/version'
 require 'uri'
-require 'json'
 require 'net/http'
 
 module SMSBao
